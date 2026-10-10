@@ -26,3 +26,7 @@ Deployment requires Cloudflare authentication. `wrangler.jsonc` targets the exis
 Chinese content as a no-JavaScript fallback. Visitors can choose a language in the
 header; the choice is saved locally. New visitors use their first supported browser
 language, falling back to English. Update all three dictionaries when changing copy.
+
+## Analytics
+
+`dist/analytics.js` uses GA4 `G-9Y73ECF3MX`, shared with linsama.me. The linker is configured for both domains before the single automatic page view; `site_section=home` distinguishes this site. Project and blog links emit `project_click` with `project_id` and `destination`. Localhost and `?noanalytics` do not load Google. Advertising signals are disabled. Verify the deployed page's collect request and GA Realtime after publishing.
